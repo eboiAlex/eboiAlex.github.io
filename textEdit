@@ -17,7 +17,7 @@ function draw() {
   background(173,216,230);
   
   //text(source_text,10,10,400);
-  
+  //what we made cool was making the backround red when the text is clicked and the lyrics change to devil
   textFont('Brush Script MT');
   textSize(26);
   let show_text;
@@ -31,7 +31,5 @@ function draw() {
     
   }
   text(show_text,10,10, width*0.9);
-  
-  //The choice of replacing 'devil' with 'stranger' almost the lyrics feel more innocent. As the song is about a person trying to justify their own toxic behavior, and blame everyone but himself for being alone. By him talking to a stranger they can come off as almost justified in blaming his friends for leaving him. To reflect this change in tone we chose a light blue to invoke tranquility, and a more fluid text. However, when you reveal the original text the font and background color becomes aggressive.
-  
+    //The lyrics our classmate chose were very suitable for the edits we made with red and lyrics "devil"
 }
