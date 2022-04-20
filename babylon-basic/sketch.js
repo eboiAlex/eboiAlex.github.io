@@ -32,34 +32,10 @@ var createScene = function () {
     light.intensity = 0.7;
 
     // Our built-in 'sphere' shape.
-    var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter: 2, segments: 32}, scene);
+    var audio = placeObject('./', 'audio.obj',
+    new BABYLON.Vector3(0, 0, 0), scene, 1,
+    new BABYLON.Vector3(0, Math.PI, 0));
 
-    // Move the sphere upward 1/2 its height
-    sphere.position.y = 1;
-
-    //create animation object to move sphere higher
-
-    var move_sphere = {obj: sphere, prop: 'position', val: new BABYLON.Vector3(0, 4, 0), 
-    dims: ['x', 'y', 'z']};
-    //create animation to dim light
-    var dim_light = {obj: light, prop: 'intensity', val: 5, dims: false};
-    
-    var rotate_cam = {obj: camera, prop: 'rotation', val: new BABYLON.Vector3(-0.00001, 0, 0), dims: ['x', 'y', 'z']};
-    var defuse = {obj: light, prop: 'deffuse', val: new BABYLON.Color3(0, 0, 255), dims: ['r', 'g', 'b']};
-    //create array of animations
-    var animations = [];
-
-    //add sphere and light animations to array
-    animations.push(move_sphere);
-    animations.push(dim_light);
-    animations.push(rotate_cam);
-    animations.push(defuse);
-
-    //execute animations on click
-    document.getElementById('renderCanvas').addEventListener('click', 
-    function(){
-    animate(animations, scene, 3);
-    });
     // Our built-in 'ground' shape.
     var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 6, height: 6}, scene);
 
