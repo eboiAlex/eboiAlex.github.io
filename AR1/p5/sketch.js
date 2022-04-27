@@ -53,7 +53,6 @@ function draw() {
     var rand1 = Math.floor(Math.random() * 255);
     var rand2 = Math.floor(Math.random() * 255);
     fill(rand, rand1, rand2);
-    ellipse(hPos.x, hPos.y, 50);
     square(hPos.x + 50, hPos.y + 50, 50);
     ellipse(hPos.x - 50, hPos.y - 50, 50, 100);
   }
